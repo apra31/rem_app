@@ -1,6 +1,9 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        if(true) {
+            window.location = "otp_mobile.html";
+        }
         document.getElementById('registration-btn').addEventListener('click', this.onRegistrationButtonClicked.bind(this));
     },
 
