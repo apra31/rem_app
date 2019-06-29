@@ -1,0 +1,72 @@
+button,
+input[type="submit"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: bold;
+    letter-spacing: .05em;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+
+}
+input[type="submit"]:disabled {
+    cursor: default;
+    opacity: .7;
+    pointer-events: none;
+}
+
+.button {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: bold;
+    letter-spacing: .05em;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    display: inline-block;
+    line-height: normal;
+    padding: .5em .75em;
+    text-transform: uppercase;
+    margin-right: .5em;
+}
+
+.button:disabled,
+.button--disabled {
+    pointer-events: none;
+    opacity: .7;
+    cursor: default;
+}
+
+.button--default {
+    border: 0;
+    border-radius: .2em;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    -o-border-radius: .2em;
+    -ms-border-radius: .2em;
+    -moz-border-radius: .2em;
+    -webkit-border-radius: .2em;
+    text-align: center;
+    background: #006594;
+    font-weight: normal;
+}

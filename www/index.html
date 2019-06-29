@@ -33,20 +33,22 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <link rel="stylesheet" type="text/css" href="css/reset.css">
-        <title>Hello World</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/button.css">
+        <title>GBI REM Ciputra</title>
     </head>
     <body>
-        <ul class="navtop">
-            <li class="navtop--button"><button id="news-btn">News</button></li>
-            <li class="navtop--button"><button id="events-btn">Events</button></li>
-            <li class="navtop--button"><button id="registration-btn">Registrasi</button></li>
-        </ul>
-        <h1>Welcome</h1>
-        <div class="logo"></div>
-        <div>
-            <h2>Jadwal:</h2>
-            <ul></ul>
+        <div class="navtop">
+            <div>
+                <button class="button button--default" id="news-btn" disabled>News</button>
+                <button class="button button--default" id="events-btn" disabled>Events</button>
+                <button class="button button--default" id="registration-btn">Registrasi</button>
+            </div>
         </div>
+        <div class="container" style="text-align: center">
+            <h1 style="font-size: 2.5em; font-weight: bold; text-transform: uppercase; margin: 1em 0; text-align: center;">Welcome</h1>
+            <img src="img/gbi_rem_logo.jpg">
+        </img>
         <script type="text/javascript" src="cordova.js"></script>
         <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
         <script type="text/javascript" src="js/app.js"></script>

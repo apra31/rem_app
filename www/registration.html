@@ -33,15 +33,17 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/button.css">
         <title>Registration</title>
     </head>
     <body>
-        <ul class="navtop">
-            <li class="navtop--button"><button id="news-btn">Back</button></li>
-        </ul>
-        <h1>Registration Page</h1>
-        <div>
-            <button id="continue-btn">Lanjutkan</button>
+        <div class="navtop">
+            <button class="button button--default" id="back-btn">Back</button>
+        </div>
+        <div class="container" style="text-align: center;">
+            <p style="margin: 2em 0; font-size: 2em; line-height: 1.4em;">Foto KTP anda untuk melakukan proses registrasi jemaat</p>
+            <button class="button button--default" id="continue-btn" style="font-size: 1.5em;">Lanjutkan</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/registration.js"></script>

@@ -3,6 +3,11 @@ var app = {
     initialize: function() {
         document.getElementById('camera-btn').addEventListener('click', this.onCameraButtonClicked.bind(this));
         document.getElementById('gallery-btn').addEventListener('click', this.onGalleryButtonClicked.bind(this));
+        document.getElementById('back-btn').addEventListener('click', this.onBackButtonClicked.bind(this));
+    },
+
+    onBackButtonClicked: function() {
+        window.history.back();
     },
 
     onCameraButtonClicked: function() {

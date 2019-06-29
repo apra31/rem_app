@@ -7,12 +7,12 @@
     <feature name="Camera">
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
-    <name>HelloWorld</name>
+    <name>REM</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        GBI REM Ciputra
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="a.pra31@gmail.com" href="http://instagram.com/gbi_rem.ciputra">
+        GBI REM Ciputra
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -23,6 +23,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
+    <icon src="www/img/gbi_rem_logo.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="orientation" value="portrait" />

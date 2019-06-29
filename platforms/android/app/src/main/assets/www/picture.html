@@ -33,24 +33,26 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/button.css">
+        <link rel="stylesheet" type="text/css" href="css/picture.css">
         <title>Registration</title>
     </head>
     <body>
         <ul class="navtop">
-            <li class="navtop--button"><button id="news-btn">Back</button></li>
+            <li class="navtop--button"><button class="button button--default" id="back-btn">Back</button></li>
         </ul>
-        <div style="width: 100%;">
-            <h1>Picture Page</h1>
+        <div class="container">
             <div>
-                <button id="camera-btn">Kamera</button>
-                <button id="gallery-btn">Gambar</button>
+                <button class="button button--default" id="camera-btn">Kamera</button>
+                <button class="button button--default" id="gallery-btn">Gambar</button>
             </div>
             <div class="pic-placeholder">
-                <img id="pic" style="width: 100%;"></img>
+                <img id="pic" style="max-width: 100%; max-height: 100%;"></img>
             </div>
-            <div>
-                <button id="continue-btn">Kirim</button>
-            </div>
+        </div>
+        <div class="footer">
+            <button class="button button--default" id="continue-btn" style="font-size: 1.5em;" disabled>Kirim</button>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/picture.js"></script>
