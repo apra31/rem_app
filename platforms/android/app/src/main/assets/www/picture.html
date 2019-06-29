@@ -39,15 +39,20 @@
         <ul class="navtop">
             <li class="navtop--button"><button id="news-btn">Back</button></li>
         </ul>
-        <h1>Picture Page</h1>
-        <div>
-            <button id="continue-btn">Kamera</button>
-            <button id="continue-btn">Gambar</button>
-        </div>
-        <div id="picture"></div>
-        <div>
-            <button id="continue-btn">Kirim</button>
+        <div style="width: 100%;">
+            <h1>Picture Page</h1>
+            <div>
+                <button id="camera-btn">Kamera</button>
+                <button id="gallery-btn">Gambar</button>
+            </div>
+            <div class="pic-placeholder">
+                <img id="pic" style="width: 100%;"></img>
+            </div>
+            <div>
+                <button id="continue-btn">Kirim</button>
+            </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/picture.js"></script>
     </body>
 </html>
