@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var db = window.openDatabase(name, version, displayName, estimatedSize);
 var app = {
     // Application Constructor
     initialize: function() {
@@ -44,3 +45,8 @@ var app = {
 };
 
 app.initialize();
+
+function callAnothePage()
+{
+    window.location = "test.html";
+}
