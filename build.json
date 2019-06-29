@@ -1,0 +1,18 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "android.keystore",
+            "storePassword": "Gbirem1234@",
+            "alias": "android-app-key",
+            "password" : "Gbirem1234!",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "android.keystore",
+            "storePassword": "Gbirem1234@",
+            "alias": "android-app-key",
+            "password" : "Gbirem1234!",
+            "keystoreType": ""
+        }
+    }
+}
