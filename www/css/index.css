@@ -1,13 +1,59 @@
-body{
-    color: rgb(44,44,44);
-    font: 300 100%/1.5em 'Proxima Nova', helvetica, sans-serif;
-    letter-spacing: .03em;
+@font-face {
+    font-family: 'corbelb';
+    src: url('../fonts/corbelb.ttf');
 }
 
+@font-face {
+    font-family: 'coves';
+    src: url('../fonts/Coves Light.otf');
+}
+
+@font-face {
+    font-family: 'coves';
+    src: url('../fonts/Coves Bold.otf');
+    font-weight: bold;
+}
+
+html {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+}
+body{
+    color: #fff;
+    font: 300 100%/1.5em 'coves', helvetica, sans-serif;
+    letter-spacing: .03em;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+body:before {
+	content:"";
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	z-index:-1;
+	background: rgb(31,126,192);
+    background: -moz-linear-gradient(0deg, rgba(31,126,192,1) 0%, rgba(38,167,191,1) 50%, rgba(99,178,171,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(31,126,192,1) 0%, rgba(38,167,191,1) 50%, rgba(99,178,171,1) 100%);
+    background: linear-gradient(0deg, rgba(31,126,192,1) 0%, rgba(38,167,191,1) 50%, rgba(99,178,171,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f7ec0",endColorstr="#63b2ab",GradientType=1);
+}
 
 .navtop {
     padding: 1em;
     font-size: .8em;
+    position: absolute;
+    width: 100%;
 }
 
 .container {
