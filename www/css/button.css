@@ -124,6 +124,22 @@ input[type="submit"]:disabled {
     font-weight: bold;
 }
 
+.button--quaternary {
+    border: 0;
+    border-radius: .2em;
+    color: rgb(28,121,162);
+    cursor: pointer;
+    display: inline-block;
+    -o-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    text-align: center;
+    background-color: rgb(58,250,228);
+    font-weight: bold;
+    font-family: 'corbelb';
+}
+
 .button--arrow:before {
     display: block;
     content: url("../img/arrow.svg");

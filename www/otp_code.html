@@ -41,20 +41,44 @@
     <body>
         <div class="container" style="text-align: center;">
             <div style="margin: 2em 0 1em; font-size: 1.2em; line-height: 1.4em;">
-                <strong style="font-weight: bold">Kode OTP terkirim!</strong><br>
-                Masukan kode OTP yang kami kirim via SMS ke +62<span id="phone-text"></span>
+                <strong style="font-weight: bold">Konfirmasi kode verifikasi anda</strong><br>
             </div>
             <table style="font-size: 4em;width: 100%; margin: .25em auto; max-width: 250px;">
                 <tr>
-                    <td style="width: 100%; padding-left: .2em;">
-                        <input id="otp-input" type="number" style="border: 1px solid black; width: 100%; font-size: 1em;" />
+                    <td style="width: 100%;" colspan="6">
+                        <input
+                            id="otp-input"
+                            type="number"
+                            style="border: 0; background-color: transparent; width: 110%; font-size: 1em; color: white; letter-spacing: .08em;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div style="border-bottom: 2px solid white; margin-right: 10px;"></div>
+                    </td>
+                    <td>
+                        <div style="border-bottom: 2px solid white; margin-right: 10px;"></div>
+                    </td>
+                    <td>
+                        <div style="border-bottom: 2px solid white; margin-right: 10px;"></div>
+                    </td>
+                    <td>
+                        <div style="border-bottom: 2px solid white; margin-right: 10px;"></div>
+                    </td>
+                    <td>
+                        <div style="border-bottom: 2px solid white; margin-right: 10px;"></div>
+                    </td>
+                    <td>
+                        <div style="border-bottom: 2px solid white; margin-right: 10px;"></div>
                     </td>
                 </tr>
             </table>
-            <button class="button button--default" id="continue-btn" style="font-size: 1em;" disabled>Lanjutkan</button>
+            <div style="margin: 2em 0 1em; font-size: 1.2em; line-height: 1.4em; font-weight: bold;">
+                kode konfirmasi telah dikirim ke +62<span id="phone-text"></span>
+            </div>
+            <button class="button button--quaternary" id="continue-btn" style="font-size: 1em;" disabled>Lanjutkan</button>
             <div style="font-size: .7em; margin: 1em 0;">
-                <p>Tidak terkirim?</p>
-                <button class="button button--secondary" id="retry-btn">Coba Lagi</button>
+                <button class="button" id="retry-btn" style="color: white; font-weight: bold;">Kirim Ulang</button>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
