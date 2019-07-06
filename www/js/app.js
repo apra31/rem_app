@@ -9,10 +9,10 @@ var app = {
         }
         document.getElementById('registration-btn').addEventListener('click', this.onRegistrationButtonClicked.bind(this));
         document.getElementById('menu-btn').addEventListener('click', this.onMenuButtonClicked.bind(this));
+        document.getElementById('schedule-btn').addEventListener('click', this.onScheduleButtonClicked.bind(this));
     },
 
     onRegistrationButtonClicked: function() {
-        console.log('registration-btn is clicked')
         window.location = "registration.html";
     },
 
@@ -24,6 +24,11 @@ var app = {
             document.getElementById('menu-btn').classList.add('button--close')
             document.getElementById('secondary-menu').style.display = 'block';
         }
+    },
+
+    onScheduleButtonClicked: function() {
+        console.log('schedule-btn is clicked');
+        window.location = "schedule.html";
     }
 };
 

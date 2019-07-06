@@ -49,11 +49,23 @@ body:before {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f7ec0",endColorstr="#63b2ab",GradientType=1);
 }
 
+.body--secondary-background:before {
+    background: rgb(224,246,248);
+}
+
 .navtop {
     padding: 1em;
     font-size: .8em;
-    position: absolute;
+    position: fixed;
     width: 100%;
+}
+
+.navtop--background {
+background: rgb(61,174,179);
+background: -moz-linear-gradient(0deg, rgba(61,174,179,1) 0%, rgba(90,178,171,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(61,174,179,1) 0%, rgba(90,178,171,1) 100%);
+background: linear-gradient(0deg, rgba(61,174,179,1) 0%, rgba(90,178,171,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3daeb3",endColorstr="#5ab2ab",GradientType=1);
 }
 
 .container {

@@ -124,6 +124,13 @@ input[type="submit"]:disabled {
     font-weight: bold;
 }
 
+.button--arrow:before {
+    display: block;
+    content: url("../img/arrow.svg");
+    width: 25px;
+    height: 25px;
+}
+
 .button--menu:before {
     display: block;
     content: url("../img/menu-white.svg");
