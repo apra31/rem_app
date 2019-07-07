@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.apra.hello;
+package com.apra.rem;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

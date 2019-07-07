@@ -8,10 +8,10 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.apra.hello"
+      "PACKAGE_NAME": "com.apra.rem"
     },
     "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.apra.hello"
+      "PACKAGE_NAME": "com.apra.rem"
     }
   },
   "dependent_plugins": {}
