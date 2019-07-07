@@ -1,6 +1,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        document.getElementById('registration-btn').addEventListener('click', this.onRegistrationButtonClicked.bind(this));
         document.getElementById('menu-btn').addEventListener('click', this.onMenuButtonClicked.bind(this));
         document.getElementById('continue-btn').addEventListener('click', this.onContinueButtonClicked.bind(this));
         document.getElementById('back-btn').addEventListener('click', this.onBackButtonClicked.bind(this));
@@ -9,6 +10,10 @@ var app = {
 
     onDeviceReady: function() {
         document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
+    },
+
+    onRegistrationButtonClicked: function() {
+        window.location = "registration.html";
     },
 
     onMenuButtonClicked: function() {

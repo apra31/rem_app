@@ -1,6 +1,7 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        document.getElementById('registration-btn').addEventListener('click', this.onRegistrationButtonClicked.bind(this));
         document.getElementById('menu-btn').addEventListener('click', this.onMenuButtonClicked.bind(this));
         document.getElementById('camera-btn').addEventListener('click', this.onCameraButtonClicked.bind(this));
         document.getElementById('gallery-btn').addEventListener('click', this.onGalleryButtonClicked.bind(this));
@@ -10,6 +11,10 @@ var app = {
 
     onDeviceReady: function() {
         document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
+    },
+
+    onRegistrationButtonClicked: function() {
+        window.location = "registration.html";
     },
 
     onMenuButtonClicked: function() {
