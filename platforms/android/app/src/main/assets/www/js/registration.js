@@ -27,7 +27,7 @@ var app = {
     },
 
     onBackButtonClicked: function() {
-        window.history.back();
+        window.location = "index.html";
     },
 
     onContinueButtonClicked: function() {

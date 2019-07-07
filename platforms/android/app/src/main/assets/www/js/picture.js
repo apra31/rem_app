@@ -28,7 +28,7 @@ var app = {
     },
 
     onBackButtonClicked: function() {
-        window.history.back();
+        window.location = "registration.html";
     },
 
     onCameraButtonClicked: function() {
