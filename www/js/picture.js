@@ -5,6 +5,11 @@ var app = {
         document.getElementById('camera-btn').addEventListener('click', this.onCameraButtonClicked.bind(this));
         document.getElementById('gallery-btn').addEventListener('click', this.onGalleryButtonClicked.bind(this));
         document.getElementById('back-btn').addEventListener('click', this.onBackButtonClicked.bind(this));
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    onDeviceReady: function() {
+        document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
     onMenuButtonClicked: function() {

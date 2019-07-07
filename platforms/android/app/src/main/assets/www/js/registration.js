@@ -4,6 +4,11 @@ var app = {
         document.getElementById('menu-btn').addEventListener('click', this.onMenuButtonClicked.bind(this));
         document.getElementById('continue-btn').addEventListener('click', this.onContinueButtonClicked.bind(this));
         document.getElementById('back-btn').addEventListener('click', this.onBackButtonClicked.bind(this));
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    onDeviceReady: function() {
+        document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
     onMenuButtonClicked: function() {

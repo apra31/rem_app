@@ -10,6 +10,11 @@ var app = {
         document.getElementById('registration-btn').addEventListener('click', this.onRegistrationButtonClicked.bind(this));
         document.getElementById('menu-btn').addEventListener('click', this.onMenuButtonClicked.bind(this));
         document.getElementById('schedule-btn').addEventListener('click', this.onScheduleButtonClicked.bind(this));
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    onDeviceReady: function() {
+        document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
     onRegistrationButtonClicked: function() {

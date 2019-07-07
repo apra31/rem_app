@@ -40,6 +40,11 @@ var app = {
         document.getElementById('continue-btn').addEventListener('click', this.onContinueButtonClicked.bind(this));
         document.getElementById('retry-btn').addEventListener('click', this.onRetryButtonClicked.bind(this));
         document.getElementById('otp-input').addEventListener('keyup', this.onOtpInputKeyup.bind(this));
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    onDeviceReady: function() {
+        document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
     onContinueButtonClicked: function() {

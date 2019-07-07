@@ -7,6 +7,11 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.getElementById('continue-btn').addEventListener('click', this.onContinueButtonClicked.bind(this));
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    onDeviceReady: function() {
+        document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
     onContinueButtonClicked: function() {
