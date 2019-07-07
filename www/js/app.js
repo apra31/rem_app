@@ -2,7 +2,8 @@ var app = {
     // Application Constructor
     initialize: function() {
         var storage = window.localStorage;
-        if(storage.getItem('phoneNumber') === null || storage.getItem('validPhoneNumber') !== 'true') {
+        if(false) {
+        // if(storage.getItem('phoneNumber') === null || storage.getItem('validPhoneNumber') !== 'true') {
             storage.removeItem('phoneNumber');
             storage.removeItem('validPhoneNumber');
             window.location = "otp_mobile.html";
