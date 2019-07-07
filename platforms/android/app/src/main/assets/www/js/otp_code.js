@@ -9,7 +9,6 @@ var source = "TCASTSMS"; // sender id
 var baseUri = "http://login8.tcastsms.net:8080/sendsms?"; // ip address atau domain server dan port
 var tcastUri = baseUri + "username=" + username + "&password=" + password + "&type=" + type + "&dlr="+ dlr + "&destination=" + destination + "&source=" + source + "&message=" + encodeURIComponent(content);
 
-console.log(window.localStorage.getItem('validPhoneNumber') !== 'true');
 if(window.localStorage.getItem('validPhoneNumber') !== 'true') {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("GET", tcastUri, true);
@@ -44,12 +43,10 @@ var app = {
     },
 
     onContinueButtonClicked: function() {
-        console.log('continue-btn is clicked');
         window.location = "index.html";
     },
 
     onRetryButtonClicked: function() {
-        console.log('retry-btn is clicked');
         var storage = window.localStorage;
         storage.removeItem('phoneNumber');
 
@@ -60,10 +57,10 @@ var app = {
         var value = document.getElementById('otp-input').value.toString();
         console.log(value);
         if (value === otpCode || value === '010101') {
-            console.log('this is valid');
             var storage = window.localStorage;
             storage.setItem('validPhoneNumber', 'true');
             document.getElementById('continue-btn').disabled = false;
+            window.location = "index.html";
         }
     }
 };

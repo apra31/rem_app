@@ -2,8 +2,12 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.getElementById('menu-btn').addEventListener('click', this.onMenuButtonClicked.bind(this));
-        document.getElementById('continue-btn').addEventListener('click', this.onContinueButtonClicked.bind(this));
         document.getElementById('back-btn').addEventListener('click', this.onBackButtonClicked.bind(this));
+        document.getElementById('back-to-top-btn').addEventListener('click', this.onBackToTopClicked.bind(this));
+    },
+
+    onBackButtonClicked: function() {
+        window.history.back();
     },
 
     onMenuButtonClicked: function() {
@@ -16,13 +20,9 @@ var app = {
         }
     },
 
-    onBackButtonClicked: function() {
-        window.history.back();
-    },
-
-    onContinueButtonClicked: function() {
-        console.log('continue-btn is clicked')
-        window.location = "picture.html";
+    onBackToTopClicked: function() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 };
 

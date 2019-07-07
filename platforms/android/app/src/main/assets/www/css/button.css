@@ -47,12 +47,15 @@ input[type="submit"]:disabled {
     padding: .5em .75em;
     text-transform: uppercase;
     margin-right: .5em;
+    background-color: transparent;
 }
 
 .button:disabled,
-.button--disabled {
+.button:disabled:before,
+.button--disabled,
+.button--disabled:before {
     pointer-events: none;
-    opacity: .7;
+    opacity: .5;
     cursor: default;
 }
 
@@ -67,21 +70,93 @@ input[type="submit"]:disabled {
     -moz-border-radius: .2em;
     -webkit-border-radius: .2em;
     text-align: center;
-    background: #006594;
+    background: transparent;
     font-weight: normal;
+    border: 1px solid rgb(58,252,218);
 }
 
-.button--secondary {
+.button--default:before {
+	content:"";
+	position:absolute;
+	left: 7px;
+	top: 7px;
+	right: -7px;
+	bottom: -7px;
+	z-index:-1;
     border: 0;
     border-radius: .2em;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
     -o-border-radius: .2em;
     -ms-border-radius: .2em;
     -moz-border-radius: .2em;
     -webkit-border-radius: .2em;
+    background: rgb(28,121,162);
+}
+
+
+.button--secondary {
+    border: 0;
+    border-radius: .2em;
+    color: rgb(28,121,162);
+    cursor: pointer;
+    display: inline-block;
+    -o-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
     text-align: center;
-    background: #000;
+    background: transparent;
     font-weight: normal;
+    border: 1px solid rgb(28,121,162);
+}
+
+.button--tertiary {
+    border: 0;
+    border-radius: .2em;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    -o-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    text-align: center;
+    background-color: rgb(28,121,162);
+    font-weight: bold;
+}
+
+.button--quaternary {
+    border: 0;
+    border-radius: .2em;
+    color: rgb(28,121,162);
+    cursor: pointer;
+    display: inline-block;
+    -o-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    text-align: center;
+    background-color: rgb(58,250,228);
+    font-weight: bold;
+    font-family: 'corbelb';
+}
+
+.button--arrow:before {
+    display: block;
+    content: url("../img/arrow.svg");
+    width: 25px;
+    height: 25px;
+}
+
+.button--menu:before {
+    display: block;
+    content: url("../img/menu-white.svg");
+    width: 25px;
+    height: 25px;
+}
+
+.button--close:before {
+    display: block;
+    content: url("../img/close.svg");
+    width: 25px;
+    height: 25px;
 }

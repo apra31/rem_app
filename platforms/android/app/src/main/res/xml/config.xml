@@ -23,7 +23,7 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
-    <icon src="www/img/gbi_rem_logo.png" />
+    <icon src="www/img/gbi_rem_logo_original.png" />
     <preference name="loglevel" value="DEBUG" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="orientation" value="portrait" />

@@ -20,7 +20,7 @@
         <allow-intent href="market:*" />
         <preference name="android-minSdkVersion" value="19" />
         <preference name="orientation" value="portrait" />
-        <icon src="www/img/gbi_rem_logo.png" />
+        <icon src="www/img/gbi_rem_logo_original.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

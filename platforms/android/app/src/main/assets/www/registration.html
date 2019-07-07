@@ -38,12 +38,29 @@
         <title>Registration</title>
     </head>
     <body>
-        <div class="navtop">
-            <button class="button button--default" id="back-btn">Back</button>
+        <div class="navtop" style="text-align: right; z-index: 2; right: 0; width: 76px;">
+            <button class="button button--menu" id="menu-btn"></button>
+        </div>
+        <div class="navtop" style="z-index: 0;">
+            <button class="button button--tertiary" id="back-btn">Kembali</button>
         </div>
         <div class="container" style="text-align: center;">
             <p style="margin: 2em 0; font-size: 2em; line-height: 1.4em;">Foto KTP anda untuk melakukan proses registrasi jemaat</p>
-            <button class="button button--default" id="continue-btn" style="font-size: 1.5em;">Lanjutkan</button>
+            <button class="button button--tertiary" id="continue-btn" style="font-size: 1.5em;">Lanjutkan</button>
+        </div>
+        <div
+            id="secondary-menu"
+            style="position: fixed; top: 0; bottom: 0; right: 0; left: 0; z-index: 1; display: none;">
+            <div style="background-color: white; opacity: .9; z-index: 2; position: absolute; right: 60px; top: 60px; padding: 0 1em; max-width: 250px; width: 50%; border-radius: 1em;">
+                <button
+                    id="registration-btn"
+                    class="button button--secondary"
+                    style="display: block; margin: 1em 0; width: 100%;">Registrasi</button>
+                <button class="button button--secondary" style="display: block; margin: 1em 0; width: 100%;" disabled>Pengaturan</button>
+                <button class="button button--secondary" style="display: block; margin: 1em 0; width: 100%;" disabled>Bantuan</button>
+                <button class="button button--secondary" style="display: block; margin: 1em 0; width: 100%;" disabled>Keluar</button>
+            </div>
+            <div style="position: absolute; top: 0; bottom: 0; right: 0; left: 0; background-color: black; opacity: .5; z-index: 1;"></div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/registration.js"></script>
