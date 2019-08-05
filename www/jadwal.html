@@ -36,49 +36,51 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/home.css">
         <link rel="stylesheet" type="text/css" href="css/button.css">
-        <link rel="stylesheet" type="text/css" href="css/icon.css">
+        <link rel="stylesheet" type="text/css" href="css/jadwal.css">
         <title>GBI REM Ciputra</title>
     </head>
     <body>
         <div class="navtop" style="text-align: center;">
-            <h1 style="font-size: 2.5em; font-weight: bold; text-transform: uppercase; margin: .5em 0 1em; text-align: center;">Jadwal Ibadah Raya</h1>
+            <h1 style="font-size: 1.5em;font-weight: bold;margin: 1em 0 0;text-align: center;">Jadwal Ibadah Raya</h1>
         </div>
         <div class="container" style="text-align: center;">
             <table style="width: 100%;">
                 <tr>
                     <td style="text-align: left;">
-                        <a id="jadwal-ciputra-btn" href="#" style="text-decoration: underline;">Hotel Ciputra</a>
+                        <div style="display: inline-block;">
+                            <a class="jadwal-link" id="jadwal-ciputra-btn" href="#">Hotel Ciputra</a>
+                            <div class="jadwal-link-line special-background"></div>
+                        </div>
                     </td>
                     <td style="text-align: right;">
-                        <a id="jadwal-daanmogot-btn" href="#">Daan Mogot</a>
+                        <a class="jadwal-link" id="jadwal-daanmogot-btn" href="#">Daan Mogot</a>
                     </td>
                 </tr>
             </table>
             <div style="padding: 1em 0;">
-                <div style="border: 1px solid black; border-radius: 1em;">
+                <div style="border: 1px solid lightgray; border-radius: 1em;">
                     <table style="width: 100%;">
                         <tr>
                             <td style="padding: 1em;">
-                                <div style="background-color: black; width: 5em; height: 5em; border-radius: 5em;"></div>
+                                <div class ="special-background" style="width: 5em; height: 5em; border-radius: 5em;"></div>
                             </td>
                             <td style="width: 100%;">
-                                <div>
+                                <div style="font-size: .8em; font-weight: bold; line-height: 1em;">
                                     Pkl 07:00 WIB
                                 </div>
                                 <div>
-                                    <div style="display: inline-block; background-color: black; width: 3px; height: 3px; border-radius: 3px;"></div>
-                                    <div style="display: inline-block; background-color: black; width: 3px; height: 3px; border-radius: 3px;"></div>
-                                    <div style="display: inline-block; background-color: black; width: 3px; height: 3px; border-radius: 3px;"></div>
+                                    <div class="special-background" style="display: inline-block; width: 3px; height: 3px; border-radius: 3px;"></div>
+                                    <div class="special-background" style="display: inline-block; width: 3px; height: 3px; border-radius: 3px;"></div>
+                                    <div class="special-background" style="display: inline-block; width: 3px; height: 3px; border-radius: 3px;"></div>
                                 </div>
-                                <div>
+                                <div style="text-transform: uppercase; font-weight: bold;">
                                     Pengky Andu
                                 </div>
                             </td>
                             <td style="padding: 1em 0 1em 1em;">
-                                <div style="border-left: 1px solid black; padding: 0 1em;">
-                                    <p>04</p>
-                                    <p>AUG</p>
-                                    <p>2019</p>
+                                <div style="padding: 0 1em; position: relative;">
+                                    <div class="special-background" style="height: 100%;position: absolute;left: 0em;width: 2px;"></div>
+                                    <p style="font-size: .7em; line-height: 1.2em; font-weight: bold;">04<br>AUG<br>2019</p>
                                     <div class="button button--menu button--location" id="location-btn"></div>
                                 </div>
                             </td>

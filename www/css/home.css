@@ -1,5 +1,13 @@
 .home-el {
     background-color: #fff;
-    margin: 0 1em;
+    margin: 0 .5em;
     border-radius: 1em;
+}
+
+.special-background {
+    background: rgb(31,127,192);
+    background: -moz-linear-gradient(90deg, rgba(31,127,192,1) 0%, rgba(98,178,171,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(31,127,192,1) 0%, rgba(98,178,171,1) 100%);
+    background: linear-gradient(90deg, rgba(31,127,192,1) 0%, rgba(98,178,171,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1f7fc0",endColorstr="#62b2ab",GradientType=1);
 }

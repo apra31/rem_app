@@ -4,7 +4,7 @@
 
 .services:after {
     display: block;
-    width: 5.4em;
+    width: 5.6em;
     margin-left: -.1em;
     position: absolute;
     top: -.2em;
@@ -13,14 +13,19 @@
 
 .services--penyerahan:after {
     content: url("../img/penyerahan.svg");
+    width: 5.3em;
 }
 
 .services--doa:after {
     content: url("../img/doa.svg");
+    width: 5.2em;
+    top: -.1em;
 }
 
 .services--konseling:after {
     content: url("../img/konseling.svg");
+    width: 5.27em;
+    top: -.05em;
 }
 
 .services--baptisan:after {
