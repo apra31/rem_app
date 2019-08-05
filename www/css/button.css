@@ -46,7 +46,6 @@ input[type="submit"]:disabled {
     line-height: normal;
     padding: .5em .75em;
     text-transform: uppercase;
-    margin-right: .5em;
     background-color: transparent;
 }
 
@@ -140,23 +139,53 @@ input[type="submit"]:disabled {
     font-family: 'corbelb';
 }
 
-.button--arrow:before {
-    display: block;
-    content: url("../img/arrow.svg");
-    width: 25px;
-    height: 25px;
-}
-
 .button--menu:before {
     display: block;
-    content: url("../img/menu-white.svg");
     width: 25px;
     height: 25px;
+    margin: auto;
 }
 
-.button--close:before {
-    display: block;
-    content: url("../img/close.svg");
-    width: 25px;
-    height: 25px;
+.button--menu-home:before {
+    content: url("../img/home-white.svg");
+}
+
+.button--menu-services:before {
+    content: url("../img/services-white.svg");
+}
+
+.button--menu-kpa:before {
+    content: url("../img/kpa-white.svg");
+}
+
+.button--menu-event:before {
+    content: url("../img/event-white.svg");
+}
+
+.button--menu-account:before {
+    content: url("../img/account-white.svg");
+}
+
+.button--menu-home-active:before {
+    content: url("../img/home-active.svg");
+}
+
+.button--menu-services-active:before {
+    content: url("../img/services-active.svg");
+}
+
+.button--menu-kpa-active:before {
+    content: url("../img/kpa-active.svg");
+}
+
+.button--menu-event-active:before {
+    content: url("../img/event-active.svg");
+}
+
+.button--menu-account-active:before {
+    content: url("../img/account-active.svg");
+}
+
+.button--location:before {
+    content: url("../img/location.svg");
 }

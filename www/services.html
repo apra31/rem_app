@@ -36,61 +36,49 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/home.css">
         <link rel="stylesheet" type="text/css" href="css/button.css">
-        <link rel="stylesheet" type="text/css" href="css/icon.css">
+        <link rel="stylesheet" type="text/css" href="css/services.css">
         <title>GBI REM Ciputra</title>
     </head>
     <body>
         <div class="navtop" style="text-align: center;">
-            <img
-                src="img/gbi_rem_logo_original.png"
-                style="min-width: 100px; max-width: 200px; width: 25%;" />
-            <h1 style="font-size: 2.5em; font-weight: bold; text-transform: uppercase; margin: .5em 0 1em; text-align: center;">Welcome</h1>
+            <h1 style="font-size: 2.5em; font-weight: bold; text-transform: uppercase; margin: .5em 0 1em; text-align: center;">Services</h1>
         </div>
-        <div class="container" style="text-align: center;">
-            <div style="background-color: rgb(229,229,229); position: absolute; bottom: 8em; left: 0; width: 100%; padding: 1em;">
+        <div class="container" style="text-align: center; padding-left: 4em; padding-right: 4em;">
                 <table style="width: 100%;">
                     <tr>
                         <td>
-                            <div class="home-el" style="display: none;">
-                                <p>
-                                    Renungan Harian
-                                </p>
-                                <div class="border-bottom: 1px solid black;"></div>
-                                <p>
-                                    03 Agustus 2019
-                                </p>
-                                <button id="renungan-btn">See More</button>
+                            <div
+                                class="services services--penyerahan"
+                                style="background-color: black; width: 5em; height: 5em; border-radius: 5em;"></div>
+                        </td>
+                        <td style="text-align: left; width: 100%;">
+                            <div style="border-top: 1px solid black; border-bottom: 1px solid black; height: 5em; margin-left: -2.5em; padding-left: 3.5em;">
+                                <p style="font-size: 1.5em; line-height: 3em;">Volunteer</p>
                             </div>
                         </td>
-                        <td style="width: 50%;">
-                            <div class="home-el">
-                                <p>
-                                    Jadwal Ibadah Raya
-                                </p>
-                                <div class="border-bottom: 1px solid black;"></div>
-                                <p>
-                                    03 Agustus 2019
-                                </p>
-                                <button id="jadwal-btn">See More</button>
+                        <td>
+                            <div style="white-space: nowrap; border-top: 1px solid black; border-bottom: 1px solid black; height: 5em; border-right: 1px solid black; border-top-right-radius: 5em; border-bottom-right-radius: 5em; width: 5em; line-height: 4em;">
+                                <div style="display: inline-block; background-color: black; width: 3px; height: 3px; border-radius: 3px;"></div>
+                                <div style="display: inline-block; background-color: black; width: 3px; height: 3px; border-radius: 3px;"></div>
+                                <div style="display: inline-block; background-color: black; width: 3px; height: 3px; border-radius: 3px;"></div>
                             </div>
                         </td>
                     </tr>
                 </table>
             </div>
-        </div>
         <div class="footer">
             <table style="width: 100%;">
                 <tr>
                     <td style="width: 20%;">
                         <div id="home-btn">
-                            <div class="button--menu button--menu-home-active" id="menu-btn"></div>
-                            <p style="color: rgb(59,255,255);">Home</p>
+                            <div class="button--menu button--menu-home" id="menu-btn"></div>
+                            <p>Home</p>
                         </div>
                     </td>
                     <td style="width: 20%;">
                         <div id="services-btn">
-                            <div class="button--menu button--menu-services" id="menu-btn"></div>
-                            <p>Services</p>
+                            <div class="button--menu button--menu-services-active" id="menu-btn"></div>
+                            <p style="color: rgb(59,255,255);">Services</p>
                         </div>
                     </td>
                     <td style="width: 20%;">
@@ -118,6 +106,5 @@
         <script type="text/javascript" src="cordova.js"></script>
         <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
         <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/home.js"></script>
     </body>
 </html>

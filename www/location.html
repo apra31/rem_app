@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -39,43 +39,15 @@
         <link rel="stylesheet" type="text/css" href="css/icon.css">
         <title>GBI REM Ciputra</title>
     </head>
-    <body>
+    <body style="background-color: rgb(235,235,235);">
         <div class="navtop" style="text-align: center;">
-            <img
-                src="img/gbi_rem_logo_original.png"
-                style="min-width: 100px; max-width: 200px; width: 25%;" />
-            <h1 style="font-size: 2.5em; font-weight: bold; text-transform: uppercase; margin: .5em 0 1em; text-align: center;">Welcome</h1>
+            <h1 style="font-size: 2.5em; font-weight: bold; text-transform: uppercase; margin: .5em 0 1em; text-align: center;">Lokasi GBI REM Hotel Ciputra</h1>
         </div>
-        <div class="container" style="text-align: center;">
-            <div style="background-color: rgb(229,229,229); position: absolute; bottom: 8em; left: 0; width: 100%; padding: 1em;">
-                <table style="width: 100%;">
-                    <tr>
-                        <td>
-                            <div class="home-el" style="display: none;">
-                                <p>
-                                    Renungan Harian
-                                </p>
-                                <div class="border-bottom: 1px solid black;"></div>
-                                <p>
-                                    03 Agustus 2019
-                                </p>
-                                <button id="renungan-btn">See More</button>
-                            </div>
-                        </td>
-                        <td style="width: 50%;">
-                            <div class="home-el">
-                                <p>
-                                    Jadwal Ibadah Raya
-                                </p>
-                                <div class="border-bottom: 1px solid black;"></div>
-                                <p>
-                                    03 Agustus 2019
-                                </p>
-                                <button id="jadwal-btn">See More</button>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
+        <iframe style="position: absolute; top: -30px; left: 0; right: 0; bottom: 0; border:0; z-index: -1; width: 100%; height: 100%;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJk-ilBAT2aS4RxDDhJCeGm28&key=AIzaSyD_GshpIIiltkb6UIzWBPoOc8uIHPseSPI" allowfullscreen></iframe>
+        <div style="z-index: 2; position: absolute; bottom: 7em; width: 100%;">
+            <div style="background-color: #fff; margin: auto; max-width: 250px; border: 1px solid black; border-radius: 1em;">
+                <p>GBI REM HOTEL CIPUTRA</p>
+                <p>Jl. Letjen S. Parman, RT.11/RW.1, Tj. Duren Utara,<br>Kec. Grogol Petamburan, Kota Jakarta Barat,<br>Daerah Khusus Ibukota Jakarta 11470</p>
             </div>
         </div>
         <div class="footer">
@@ -118,6 +90,6 @@
         <script type="text/javascript" src="cordova.js"></script>
         <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
         <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/home.js"></script>
+        <script type="text/javascript" src="js/location.js"></script>
     </body>
 </html>
