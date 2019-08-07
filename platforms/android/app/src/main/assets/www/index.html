@@ -28,7 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'" />
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
@@ -63,14 +63,12 @@
                             </div>
                         </td>
                         <td style="width: 50%;">
-                            <div class="home-el" style="padding: 1em;">
+                            <div id="schedule-home" class="home-el" style="padding: 1em; display: none;">
                                 <p style="text-transform: uppercase; font-weight: bold; font-size: 1em; line-height: 1.2em;">
                                     Jadwal<br>Ibadah Raya
                                 </p>
                                 <div style="border-bottom: 2px solid black; margin: .3em auto; width: 60%;"></div>
-                                <p style="font-size: .8em; font-weight: bold;">
-                                    03 Agustus 2019
-                                </p>
+                                <p id="schedule-home-date" style="font-size: .8em; font-weight: bold;"></p>
                                 <button id="jadwal-btn" class="button button--quaternary" style="margin: auto; width: 60%;">See More</button>
                             </div>
                         </td>

@@ -36,28 +36,27 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/home.css">
         <link rel="stylesheet" type="text/css" href="css/button.css">
-        <link rel="stylesheet" type="text/css" href="css/jadwal.css">
+        <link rel="stylesheet" type="text/css" href="css/icon.css">
         <title>GBI REM Ciputra</title>
     </head>
-    <body>
+    <body style="background-color: rgb(235,235,235);">
         <div class="navtop" style="text-align: center;">
-            <h1 style="font-size: 1.5em;font-weight: bold;margin: 1em 0 0;text-align: center;">Jadwal Ibadah Raya</h1>
+            <h1 style="font-size: 1.5em;font-weight: bold;margin: 1em 0 0;text-align: center;">Church Contact</h1>
         </div>
-        <div class="container" style="text-align: center; padding-bottom: 10em;">
-            <table style="width: 100%;">
-                <tr>
-                    <td style="text-align: left;">
-                        <a class="jadwal-link" id="jadwal-ciputra-btn" href="#">Hotel Ciputra</a>
-                    </td>
-                    <td style="text-align: right;">
-                        <div style="display: inline-block;">
-                            <a class="jadwal-link" id="jadwal-daanmogot-btn" href="#">Daan Mogot</a>
-                            <div class="jadwal-link-line special-background"></div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <div style="padding: 1em 0;" id="worship-schedules" data-location="daanmogot">
+        <iframe style="position: absolute; top: -30px; left: 0; right: 0; bottom: 0; border:0; width: 100%; height: 100%;" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q=-6.173025%2C%20106.787267&key=AIzaSyAnbzZKAKkpiXHXjhJDwvdCwgPymVL_HmQ" allowfullscreen></iframe>
+        <div style="z-index: 2; position: absolute; bottom: 7em; width: 100%;">
+            <div style="background-color: #fff; margin: auto; width: 90%; max-width: 400px; border: 1px solid lightgray; border-radius: 1em; padding: 1em;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <p style="font-weight: bold;">SEKRETARIAT GBI REM</p>
+                            <p style="font-size: .7em; font-weight: bold; line-height: 1.2em;">Ruko Sentra Bisnis Blok B no 12 B<br>Jl. Tanjung Duren Raya, Jakarta Barat<br>Telp 021- 5644740 , 087867000008<br>Email : sekretariatgbirem.ciputra@gmail.com</p>
+                        </td>
+                        <td>
+                            <div class=" button--menu button--big-location" id="location-btn" style="margin: -1em 0;"></div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </div>
         <div class="footer">
@@ -65,8 +64,8 @@
                 <tr>
                     <td style="width: 20%;">
                         <div id="home-btn">
-                            <div class="button--menu button--menu-home-active" id="menu-btn"></div>
-                            <p style="color: rgb(59,255,255);">Home</p>
+                            <div class="button--menu button--menu-home" id="menu-btn"></div>
+                            <p>Home</p>
                         </div>
                     </td>
                     <td style="width: 20%;">
@@ -90,50 +89,16 @@
                     </td>
                     <td style="width: 20%;">
                         <div id="account-btn">
-                            <div class="button--menu button--menu-account" id="menu-btn"></div>
-                            <p>Account</p>
+                            <div class="button--menu button--menu-account button--menu-account-active" id="menu-btn"></div>
+                            <p style="color: rgb(59,255,255);">Account</p>
                         </div>
                     </td>
                 </tr>
             </table>
         </div>
-        <script id="worship-schedules-template" type="text/x-handlebars-templates">
-            {{#each worship_schedules}}
-                <div style="border: 1px solid lightgray; border-radius: 1em; margin-bottom: 1em;">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td style="padding: 1em;">
-                                <div class ="special-background" style="width: 5em; height: 5em; border-radius: 5em;"></div>
-                            </td>
-                            <td style="width: 100%;">
-                                <div style="font-size: .8em; font-weight: bold; line-height: 1em;">
-                                    Pkl {{formatted_time}} WIB
-                                </div>
-                                <div>
-                                    <div class="special-background" style="display: inline-block; width: 3px; height: 3px; border-radius: 3px;"></div>
-                                    <div class="special-background" style="display: inline-block; width: 3px; height: 3px; border-radius: 3px;"></div>
-                                    <div class="special-background" style="display: inline-block; width: 3px; height: 3px; border-radius: 3px;"></div>
-                                </div>
-                                <div style="text-transform: uppercase; font-weight: bold;">
-                                    {{priest}}
-                                </div>
-                            </td>
-                            <td style="padding: 1em 0 1em 1em;">
-                                <div style="padding: 0 1em; position: relative;">
-                                    <div class="special-background" style="height: 100%;position: absolute;left: 0em;width: 2px;"></div>
-                                    <p style="font-size: .7em; line-height: 1.2em; font-weight: bold;">{{date_num}}<br>{{beautiful_short_month}}<br>{{year}}</p>
-                                    <div class="button button--menu button--location d-location-btn"></div>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            {{/each}}
-        </script>
         <script type="text/javascript" src="cordova.js"></script>
         <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
-        <script type="text/javascript" src="js/handlebars.min-v4.1.2.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/jadwal.js"></script>
+        <script type="text/javascript" src="js/location.js"></script>
     </body>
 </html>
