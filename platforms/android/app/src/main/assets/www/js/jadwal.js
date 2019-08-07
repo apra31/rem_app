@@ -22,6 +22,11 @@ var jadwal = {
                 locationButton[i].addEventListener('click', this.onLocationDaanmogotButtonClicked.bind(this));
             }
         }
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    onDeviceReady: function() {
+        document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
     onJadwalCiputraButtonClicked: function() {

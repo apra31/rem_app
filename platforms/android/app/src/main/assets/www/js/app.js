@@ -13,6 +13,11 @@ var app = {
         document.getElementById('kpa-btn').addEventListener('click', this.onKpaButtonClicked.bind(this));
         document.getElementById('event-btn').addEventListener('click', this.onEventButtonClicked.bind(this));
         document.getElementById('account-btn').addEventListener('click', this.onAccountButtonClicked.bind(this));
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    onDeviceReady: function() {
+        document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
     onHomeButtonClicked: function() {

@@ -1,11 +1,19 @@
 var app = {
     // Application Constructor
     initialize: function() {
-        document.getElementById('registration-btn').addEventListener('click', this.onRegistrationButtonClicked.bind(this));
-        document.getElementById('menu-btn').addEventListener('click', this.onMenuButtonClicked.bind(this));
+        var storage = window.localStorage;
+        var email = storage.getItem('email') || '';
+        var phone = storage.getItem('phone') || '';
+        var password = storage.getItem('password') || '';
+
+        if (email.length === 0) { window.location = "sign_up.html"; }
+        else if (phone.length === 0) { window.location = "sign_up.html"; }
+        else if (password.length < 6) { window.location = "sign_up.html"; }
+
         document.getElementById('camera-btn').addEventListener('click', this.onCameraButtonClicked.bind(this));
         document.getElementById('gallery-btn').addEventListener('click', this.onGalleryButtonClicked.bind(this));
         document.getElementById('back-btn').addEventListener('click', this.onBackButtonClicked.bind(this));
+        document.getElementById('continue-btn').addEventListener('click', this.onContinueButtonClicked.bind(this));
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -13,8 +21,44 @@ var app = {
         document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
-    onRegistrationButtonClicked: function() {
-        window.location = "registration.html";
+    onContinueButtonClicked: function() {
+        var storage = window.localStorage;
+        var email = storage.getItem('email') || '';
+        var phone = storage.getItem('phone') || '';
+        var password = storage.getItem('password') || '';
+        var image = document.getElementById('pic').src;
+        
+        if (image.length === 0) { alert('Mohon upload KTP'); return; }
+
+        var request = {
+            "user": {
+                "email": email,
+                "phone": phone,
+                "password": password,
+                "avatar": {
+                    "data": image
+                }
+            }
+        }
+        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+        xmlhttp.onreadystatechange = function() { 
+            if (this.readyState === 4 && this.status === 200) {
+                var result = JSON.parse(this.responseText);
+                storage.setItem('session', result.session);
+                storage.setItem('user_id', result.user_id);
+                var session = storage.getItem('session') || '';
+                var user_id = storage.getItem('user_id') || '';
+
+                if(session.length > 0 && user_id.length > 0) {
+                    window.location = 'index.html';
+                }
+            } else if (this.readyState === 4 && this.status !== 200) {
+                alert('Upload gagal, coba lagi')
+            }
+        }
+        xmlhttp.open("POST", "http://gbi-rem.unchannels.com/api/v1/session/signup", true)
+        xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xmlhttp.send(JSON.stringify(request));
     },
 
     onMenuButtonClicked: function() {
@@ -28,7 +72,7 @@ var app = {
     },
 
     onBackButtonClicked: function() {
-        window.location = "registration.html";
+        window.location = "sign_up.html";
     },
 
     onCameraButtonClicked: function() {

@@ -2,6 +2,11 @@ var account = {
     // Application Constructor
     initialize: function() {
         document.getElementById('church-contact-btn').addEventListener('click', this.churchContactButtonClicked.bind(this));
+        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+    },
+
+    onDeviceReady: function() {
+        document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
     churchContactButtonClicked: function() {

@@ -35,27 +35,38 @@
         <link rel="stylesheet" type="text/css" href="css/reset.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/button.css">
-        <link rel="stylesheet" type="text/css" href="css/picture.css">
         <link rel="stylesheet" type="text/css" href="css/welcome.css">
         <title>GBI REM Ciputra</title>
     </head>
     <body>
-        <body>
         <div class="welcome-background" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -2;"></div>
         <button id="back-btn" style="position: absolute; top: 1em; left: 1em;" class="button button--tertiary">Kembali</button>
-        <div class="container" style="text-align: center; padding: 0 1em; margin-top: 4em;">
-            <div>
-                <button class="button button--tertiary" id="camera-btn">Kamera</button>
-                <button class="button button--tertiary" id="gallery-btn">Gambar</button>
-            </div>
-            <div class="pic-placeholder">
-                <img id="pic" style="max-width: 100%; max-height: 100%;"></img>
+        <div class="container" style="text-align: center; padding: 0 4em; margin-top: 1em;">
+            <div style="margin: 0; font-size: 1.2em; line-height: 1.4em;">
+                <img
+                    src="img/gbi_rem_logo_original.png"
+                    style="width: 75px;" />
             </div>
             <div style="margin-top: 1em; line-height: 1em;">
-                <button id="continue-btn" style="display: block; margin: .5em auto; width: 150px;" class="button button--tertiary">Kirim</button>
+                <p style="font-weight: bold; font-size: .8em; margin: .25em 0;">Masukkan e-mail saudara:</p>
+                <input
+                    id="email-input"
+                    type="text"
+                    style="border: 0; width: 100%; font-size: 1em; border-radius: 2em; padding: .25em .5em;" />
+            </div>
+            <div style="margin-top: 1em; line-height: 1em;">
+                <p style="font-weight: bold; font-size: .8em; margin: .25em 0;">Masukkan password saudara:</p>
+                <input
+                    id="password-input"
+                    type="password"
+                    style="border: 0; width: 100%; font-size: 1em; border-radius: 2em; padding: .25em .5em;" />
+            </div>
+            <div style="margin-top: 1em; line-height: 1em;">
+                <button id="login-btn" style="display: block; margin: .5em auto; width: 150px;" class="button button--tertiary">Masuk</button>
+                <button id="forgot-btn" style="display: block; margin: .5em auto; width: 150px; font-size: .8em; line-height: 1.718em;" class="button button--tertiary">Lupa Password</button>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/picture.js"></script>
+        <script type="text/javascript" src="js/sign_in.js"></script>
     </body>
 </html>
