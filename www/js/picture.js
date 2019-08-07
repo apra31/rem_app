@@ -46,10 +46,12 @@ var app = {
                 var result = JSON.parse(this.responseText);
                 storage.setItem('session', result.session);
                 storage.setItem('user_id', result.user_id);
+                storage.setItem('user_email', result.user_email);
                 var session = storage.getItem('session') || '';
                 var user_id = storage.getItem('user_id') || '';
+                var user_email = storage.getItem('user_email') || '';
 
-                if(session.length > 0 && user_id.length > 0) {
+                if(session.length > 0 && user_id.length > 0 && user_email.length > 0) {
                     window.location = 'index.html';
                 }
             } else if (this.readyState === 4 && this.status !== 200) {

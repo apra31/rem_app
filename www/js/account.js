@@ -4,6 +4,8 @@ var account = {
         document.getElementById('church-contact-btn').addEventListener('click', this.churchContactButtonClicked.bind(this));
         document.getElementById('log-out-btn').addEventListener('click', this.logOutButtonClicked.bind(this));
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        var storage = window.localStorage;
+        document.getElementById('user-name').innerHTML = storage.user_email
     },
 
     onDeviceReady: function() {
