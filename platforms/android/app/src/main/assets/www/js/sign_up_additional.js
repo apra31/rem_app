@@ -31,7 +31,7 @@ var app = {
         var name = document.getElementById('name-input').value || '';
         var address = document.getElementById('address-input').value || '';
         var dob = document.getElementById('dob-input').value || '';
-        
+
         if (name.length === 0) { alert('Masukan nama'); return; }
         else if (address.length === 0) { alert('Masukan alamat'); return; }
         else if (dob.length === 0) { alert('Masukan tanggal lahir'); return; }
@@ -45,9 +45,10 @@ var app = {
                 "address": address,
                 "dob": dob,
             }
-        }
-        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        xmlhttp.onreadystatechange = function() { 
+        };
+
+        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+        xmlhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 var result = JSON.parse(this.responseText);
                 storage.setItem('session', result.session);
@@ -60,8 +61,12 @@ var app = {
                 if(session.length > 0 && user_id.length > 0 && user_email.length > 0) {
                     window.location = 'index.html';
                 }
+            } else if (this.readyState === 4 && this.status === 230) {
+                var email = storage.getItem('email') || '';
+                alert(email + ' sudah terdaftar');
             } else if (this.readyState === 4 && this.status !== 200) {
-                alert('Upload gagal, coba lagi')
+                var email = storage.getItem('email') || '';
+                alert('Upload gagal, coba lagi, status: ' + this.status.toString() + ', email: ' + email + ', response: ' + this.responseText)
             }
         }
         xmlhttp.open("POST", "http://gbi-rem.unchannels.com/api/v1/session/signup", true)
