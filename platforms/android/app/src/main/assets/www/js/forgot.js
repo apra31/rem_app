@@ -6,9 +6,8 @@
 var app = {
     // Application Constructor
     initialize: function() {
+        document.getElementById('send-btn').addEventListener('click', this.onForgotButtonClicked.bind(this));
         document.getElementById('back-btn').addEventListener('click', this.onBackButtonClicked.bind(this));
-        document.getElementById('login-btn').addEventListener('click', this.onLoginButtonClicked.bind(this));
-        document.getElementById('forgot-btn').addEventListener('click', this.onForgotButtonClicked.bind(this));
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -17,39 +16,24 @@ var app = {
     },
 
     onBackButtonClicked: function() {
-        window.location = "welcome.html";
+        window.location = "sign_in.html";
     },
 
     onForgotButtonClicked: function() {
-        window.location = "forgot_password.html";
-    },
-
-    onLoginButtonClicked: function() {
-        var storage = window.localStorage;
         var email = document.getElementById('email-input').value
-        var password = document.getElementById('password-input').value
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() { 
             if (this.readyState === 4 && this.status === 200) {
                 var result = JSON.parse(this.responseText);
                 console.log(result);
-                storage.setItem('session', result.session);
-                storage.setItem('user_id', result.user_id);
-                storage.setItem('user_email', result.user_email);
-                var session = storage.getItem('session') || '';
-                var user_id = storage.getItem('user_id') || '';
-                var user_email = storage.getItem('user_email') || '';
-
-                if(session.length > 0 && user_id.length > 0) {
-                    window.location = 'index.html';
-                }
+                alert('Email terkirim')
             } else if ((this.readyState === 4 && this.status !== 200)) {
-                alert('Email atau password salah')
+                alert('Email tidak ditemukan, coba lagi')
             }
         }
-        xhttp.open("PATCH", "http://gbi-rem.unchannels.com/api/v1/session/login", true)
+        xhttp.open("PATCH", "http://gbi-rem.unchannels.com/api/v1/session/forgot", true)
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhttp.send(JSON.stringify({ "email": email, "password": password }));
+        xhttp.send(JSON.stringify({ "email": email }));
     }
 };
 

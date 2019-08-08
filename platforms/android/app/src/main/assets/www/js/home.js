@@ -4,8 +4,9 @@ var home = {
         var storage = window.localStorage;
         var session = storage.getItem('session');
         var user_id = storage.getItem('user_id');
+        var user_email = storage.getItem('user_email');
 
-        if(!session || !user_id) {
+        if(!session || !user_id || !user_email) {
             window.location = 'welcome.html';
             return;
         }
@@ -18,12 +19,23 @@ var home = {
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
         xmlhttp.onreadystatechange = function() { 
             if (this.readyState === 4 && this.status === 200) {
-                alert(this.responseText)
+                var result = JSON.parse(this.responseText);
+                if (result.validate === false) {
+                    storage.removeItem('session');
+                    storage.removeItem('user_id');
+                    storage.removeItem('user_email');
+                    window.location = 'welcome.html';
+                    return;
+                }
             } else if ((this.readyState === 4 && this.status !== 200)) {
-                alert('Upload gagal, coba lagi')
+                storage.removeItem('session');
+                storage.removeItem('user_id');
+                storage.removeItem('user_email');
+                window.location = 'welcome.html';
+                return;
             }
         }
-        xmlhttp.open("POST", "http://gbi-rem.unchannels.com/api/v1/session/signup", true)
+        xmlhttp.open("POST", "http://gbi-rem.unchannels.com/api/v1/session/check", true)
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.send(JSON.stringify(request));
 

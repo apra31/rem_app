@@ -10,8 +10,6 @@ var app = {
         else if (phone.length === 0) { window.location = "sign_up.html"; }
         else if (password.length < 6) { window.location = "sign_up.html"; }
 
-        document.getElementById('camera-btn').addEventListener('click', this.onCameraButtonClicked.bind(this));
-        document.getElementById('gallery-btn').addEventListener('click', this.onGalleryButtonClicked.bind(this));
         document.getElementById('back-btn').addEventListener('click', this.onBackButtonClicked.bind(this));
         document.getElementById('continue-btn').addEventListener('click', this.onContinueButtonClicked.bind(this));
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -21,23 +19,31 @@ var app = {
         document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
+    onBackButtonClicked: function() {
+        window.location = "sign_up.html";
+    },
+
     onContinueButtonClicked: function() {
         var storage = window.localStorage;
         var email = storage.getItem('email') || '';
         var phone = storage.getItem('phone') || '';
         var password = storage.getItem('password') || '';
-        var image = document.getElementById('pic').src;
+        var name = document.getElementById('name-input').value || '';
+        var address = document.getElementById('address-input').value || '';
+        var dob = document.getElementById('dob-input').value || '';
         
-        if (image.length === 0) { alert('Mohon upload KTP'); return; }
+        if (name.length === 0) { alert('Masukan nama'); return; }
+        else if (address.length === 0) { alert('Masukan alamat'); return; }
+        else if (dob.length === 0) { alert('Masukan tanggal lahir'); return; }
 
         var request = {
             "user": {
                 "email": email,
                 "phone": phone,
                 "password": password,
-                "avatar": {
-                    "data": image
-                }
+                "name": name,
+                "address": address,
+                "dob": dob,
             }
         }
         var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
@@ -61,57 +67,6 @@ var app = {
         xmlhttp.open("POST", "http://gbi-rem.unchannels.com/api/v1/session/signup", true)
         xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xmlhttp.send(JSON.stringify(request));
-    },
-
-    onMenuButtonClicked: function() {
-        if(document.getElementById('menu-btn').classList.contains('button--close')) {
-            document.getElementById('menu-btn').classList.remove('button--close')
-            document.getElementById('secondary-menu').style.display = 'none';
-        } else {
-            document.getElementById('menu-btn').classList.add('button--close')
-            document.getElementById('secondary-menu').style.display = 'block';
-        }
-    },
-
-    onBackButtonClicked: function() {
-        window.location = "sign_up.html";
-    },
-
-    onCameraButtonClicked: function() {
-        console.log('camera-btn is clicked');
-        navigator.camera.getPicture(onSuccess, onFail, {
-            quality: 50,
-            destinationType: Camera.DestinationType.DATA_URL,
-            correctOrientation: true
-        });
-
-        function onSuccess(imageData) {
-            var image = document.getElementById('pic');
-            image.src = "data:image/jpeg;base64," + imageData;
-        }
-
-        function onFail(message) {
-            alert('Failed because: ' + message);
-        }
-    },
-
-    onGalleryButtonClicked: function() {
-        console.log('gallery-btn is clicked');
-        navigator.camera.getPicture(onSuccess, onFail, {
-            quality: 50,
-            destinationType: Camera.DestinationType.DATA_URL,
-            sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
-            correctOrientation: true
-        });
-
-        function onSuccess(imageData) {
-            var image = document.getElementById('pic');
-            image.src = "data:image/jpeg;base64," + imageData;
-        }
-
-        function onFail(message) {
-            alert('Failed because: ' + message);
-        }
     }
 };
 
