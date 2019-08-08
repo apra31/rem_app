@@ -30,7 +30,7 @@ var app = {
             if (email.length === 0) { alert('Masukan email'); }
             else if (phone.length === 0) { alert('Masukan nomor ponsel'); }
             else if (password.length < 6) { alert('Masukan password minimal 6 karakter'); }
-            else { window.location = "picture.html"; }
+            else { window.location = "sign_up_additional.html"; }
         } else {
             alert('Password and Konfirmasi Password tidak cocok')
         }
