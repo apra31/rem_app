@@ -26,13 +26,12 @@ var app = {
 
     onLoginButtonClicked: function() {
         var storage = window.localStorage;
-        var email = document.getElementById('email-input').value
-        var password = document.getElementById('password-input').value
+        var email = document.getElementById('email-input').value;
+        var password = document.getElementById('password-input').value;
         var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() { 
+        xhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 var result = JSON.parse(this.responseText);
-                console.log(result);
                 storage.setItem('session', result.session);
                 storage.setItem('user_id', result.user_id);
                 storage.setItem('user_email', result.user_email);
@@ -43,11 +42,16 @@ var app = {
                 if(session.length > 0 && user_id.length > 0) {
                     window.location = 'index.html';
                 }
-            } else if ((this.readyState === 4 && this.status !== 200)) {
-                alert('Email atau password salah')
+            } else if (this.readyState === 4 && this.status === 250) {
+                alert('Password untuk email ' + email + ' salah');
+            } else if (this.readyState === 4 && this.status === 240) {
+                alert('Email ' + email + ' tidak ditemukan');
+            } else if (this.readyState === 4 && this.status !== 200) {
+                alert('Login gagal, coba lagi, status: ' + this.status.toString() + ', email: ' + email + ', response: ' + this.responseText);
             }
-        }
-        xhttp.open("PATCH", "http://gbi-rem.unchannels.com/api/v1/session/login", true)
+        };
+
+        xhttp.open("PATCH", "http://gbi-rem.unchannels.com/api/v1/session/login", true);
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhttp.send(JSON.stringify({ "email": email, "password": password }));
     }
