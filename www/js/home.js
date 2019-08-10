@@ -16,8 +16,8 @@ var home = {
             "user_id": user_id
         };
 
-        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-        xmlhttp.onreadystatechange = function() { 
+        var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance
+        xmlhttp.onreadystatechange = function() {
             if (this.readyState === 4 && this.status === 200) {
                 var result = JSON.parse(this.responseText);
                 if (result.validate === false) {
