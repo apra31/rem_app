@@ -43,13 +43,10 @@ var app = {
                     window.location = 'index.html';
                 }
             } else if (this.readyState === 4 && this.status === 250) {
-                var email = storage.getItem('email') || '';
                 alert('Password untuk email ' + email + ' salah');
             } else if (this.readyState === 4 && this.status === 240) {
-                var email = storage.getItem('email') || '';
                 alert('Email ' + email + ' tidak ditemukan');
             } else if (this.readyState === 4 && this.status !== 200) {
-                var email = storage.getItem('email') || '';
                 alert('Login gagal, coba lagi, status: ' + this.status.toString() + ', email: ' + email + ', response: ' + this.responseText);
             }
         };
