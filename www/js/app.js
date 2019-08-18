@@ -8,9 +8,11 @@ var app = {
             storage.removeItem('validPhoneNumber');
             window.location = "otp_mobile.html";
         }
-        document.getElementById('registration-btn').addEventListener('click', this.onRegistrationButtonClicked.bind(this));
-        document.getElementById('menu-btn').addEventListener('click', this.onMenuButtonClicked.bind(this));
-        document.getElementById('schedule-btn').addEventListener('click', this.onScheduleButtonClicked.bind(this));
+        document.getElementById('home-btn').addEventListener('click', this.onHomeButtonClicked.bind(this));
+        document.getElementById('services-btn').addEventListener('click', this.onServicesButtonClicked.bind(this));
+        document.getElementById('kpa-btn').addEventListener('click', this.onKpaButtonClicked.bind(this));
+        document.getElementById('event-btn').addEventListener('click', this.onEventButtonClicked.bind(this));
+        document.getElementById('account-btn').addEventListener('click', this.onAccountButtonClicked.bind(this));
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -18,23 +20,24 @@ var app = {
         document.addEventListener('backbutton', function(e) { e.preventDefault() }, false);
     },
 
-    onRegistrationButtonClicked: function() {
-        window.location = "registration.html";
+    onHomeButtonClicked: function() {
+        window.location = "index.html";
     },
 
-    onMenuButtonClicked: function() {
-        if(document.getElementById('menu-btn').classList.contains('button--close')) {
-            document.getElementById('menu-btn').classList.remove('button--close')
-            document.getElementById('secondary-menu').style.display = 'none';
-        } else {
-            document.getElementById('menu-btn').classList.add('button--close')
-            document.getElementById('secondary-menu').style.display = 'block';
-        }
+    onServicesButtonClicked: function() {
+        window.location = "services.html";
     },
 
-    onScheduleButtonClicked: function() {
-        console.log('schedule-btn is clicked');
-        window.location = "schedule.html";
+    onKpaButtonClicked: function() {
+        window.location = "kpa.html";
+    },
+
+    onEventButtonClicked: function() {
+        window.location = "event.html";
+    },
+
+    onAccountButtonClicked: function() {
+        window.location = "account.html";
     }
 };
 

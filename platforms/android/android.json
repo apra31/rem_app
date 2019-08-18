@@ -39,15 +39,34 @@
         "parents": {
           "/*": []
         }
+      },
+      "app/src/main/AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<application android:usesCleartextTraffic=\"true\" />",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml",
+              "oldAttrib": {
+                "android:hardwareAccelerated": "true",
+                "android:icon": "@mipmap/ic_launcher",
+                "android:label": "@string/app_name",
+                "android:supportsRtl": "true",
+                "android:usesCleartextTraffic": "true"
+              }
+            }
+          ]
+        }
       }
     }
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.apra.rem"
+      "PACKAGE_NAME": "com.gbi_rem.rem"
     },
     "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.apra.rem"
+      "PACKAGE_NAME": "com.gbi_rem.rem"
     }
   },
   "dependent_plugins": {},
