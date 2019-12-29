@@ -1,0 +1,14 @@
+.jadwal-link {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.jadwal-link-line {
+    height: 2px;
+}
+
+.jadwal-icon {
+    background-color: black;
+    width: 5em;
+    height: 5em;
+    border-radius: 5em;
+}
