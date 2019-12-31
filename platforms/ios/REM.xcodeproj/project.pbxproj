@@ -357,6 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbi_rem.rem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WK_WEB_VIEW_ONLY = 1;
 			};
 			name = Debug;
 		};
@@ -380,6 +381,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbi_rem.rem;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WK_WEB_VIEW_ONLY = 1;
 			};
 			name = Release;
 		};
@@ -421,7 +423,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				WK_WEB_VIEW_ONLY = 0;
+				WK_WEB_VIEW_ONLY = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbi_rem.rem;
 			};
 			name = Debug;
@@ -462,7 +464,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
-				WK_WEB_VIEW_ONLY = 0;
+				WK_WEB_VIEW_ONLY = 1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gbi_rem.rem;
 			};
 			name = Release;
