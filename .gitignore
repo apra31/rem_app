@@ -1,3 +1,5 @@
 # Ignore gradle
 /.gradle
 /node_modules
+/node_modules/.bin
+/node_modules/platforms/ios/node_modules/.bin
