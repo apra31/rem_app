@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.gbi_rem.rem" version="2.4.1"
+<widget id="com.gbi_rem.rem" version="2.4.2"
     android-versionCode="10181922"
     xmlns="http://www.w3.org/ns/widgets"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -22,6 +22,8 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="phonegap-version" value="cli-7.0.1" />
+    <icon src="www/img/icon_ios.png" width="1024" height="1024" />
     <platform name="android">
         <allow-intent href="market:*" />
         <preference name="android-minSdkVersion" value="19" />
@@ -37,6 +39,7 @@
         <icon height="76" platform="ios" src="www/img/icon_ios-76.png" width="76" />
         <icon height="120" platform="ios" src="www/img/icon_ios-120.png" width="120" />
         <icon height="152" platform="ios" src="www/img/icon_ios-152.png" width="152" />
+        <icon height="1024" platform="ios" src="www/img/icon_ios.png" width="1024" />
         <icon platform="ios" src="www/img/icon_ios.png"  />
     </platform>
 </widget>
