@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/button.css">
+        <link rel="stylesheet" type="text/css" href="css/picture.css">
+        <title>Registration</title>
+    </head>
+    <body class="body--secondary-background">
+        <div class="navtop" style="text-align: right; z-index: 2; right: 0; width: 76px;">
+            <button class="button button--menu" id="menu-btn"></button>
+        </div>
+        <div class="navtop navtop--background" style="z-index: 0;">
+            <button class="button button--tertiary" id="back-btn">Kembali</button>
+            <p style="text-align: center; font-size: 2em; line-height: 1em; font-weight: bold;">
+                Jadwal<br>Ibadah Raya
+            </p>
+        </div>
+        <div class="container" style="margin-top: 8em; color: rgb(28,121,162); text-align: center; font-weight: bold;">
+            <p>Minggu, 7 Juli 2019</p>
+            <div style="background-color: white; color: rgb(28,121,162); width: 70%; margin: 1em auto; text-align: center; font-weight: bold; border-radius: 1em;">
+                <div style="padding: 1em;">
+                    Pkl 07:00 WIB
+                </div>
+                <div style="border-bottom: 2px solid rgb(28,121,162); width: 20%; margin: auto;"></div>
+                <div style="padding: 1em;">
+                    Ps. Johan Lumoindong
+                </div>
+            </div>
+            <div style="background-color: white; color: rgb(28,121,162); width: 70%; margin: 1em auto; text-align: center; font-weight: bold; border-radius: 1em;">
+                <div style="padding: 1em;">
+                    Pkl 09:00 WIB
+                </div>
+                <div style="border-bottom: 2px solid rgb(28,121,162); width: 20%; margin: auto;"></div>
+                <div style="padding: 1em;">
+                    Ps. Pengky Andu
+                </div>
+            </div>
+            <div style="background-color: white; color: rgb(28,121,162); width: 70%; margin: 1em auto; text-align: center; font-weight: bold; border-radius: 1em;">
+                <div style="padding: 1em;">
+                    Pkl 11:00 WIB
+                </div>
+                <div style="border-bottom: 2px solid rgb(28,121,162); width: 20%; margin: auto;"></div>
+                <div style="padding: 1em;">
+                    Ps. Paulus T Supit (PK)
+                </div>
+            </div>
+            <div style="background-color: white; color: rgb(28,121,162); width: 70%; margin: 1em auto; text-align: center; font-weight: bold; border-radius: 1em;">
+                <div style="padding: 1em;">
+                    Pkl 13:00 WIB
+                </div>
+                <div style="border-bottom: 2px solid rgb(28,121,162); width: 20%; margin: auto;"></div>
+                <div style="padding: 1em;">
+                    Ps. Mawar Simorangkir
+                </div>
+            </div>
+            <div style="background-color: white; color: rgb(28,121,162); width: 70%; margin: 1em auto; text-align: center; font-weight: bold; border-radius: 1em;">
+                <div style="padding: 1em;">
+                    Pkl 15:00 WIB
+                </div>
+                <div style="border-bottom: 2px solid rgb(28,121,162); width: 20%; margin: auto;"></div>
+                <div style="padding: 1em;">
+                    Ps. Yolanda Fergina (HYP)
+                </div>
+            </div>
+            <div style="background-color: white; color: rgb(28,121,162); width: 70%; margin: 1em auto; text-align: center; font-weight: bold; border-radius: 1em;">
+                <div style="padding: 1em;">
+                    Pkl 17:00 WIB
+                </div>
+                <div style="border-bottom: 2px solid rgb(28,121,162); width: 20%; margin: auto;"></div>
+                <div style="padding: 1em;">
+                    Ps. Pengky Andu
+                </div>
+            </div>
+            <div style="background-color: white; color: rgb(28,121,162); width: 70%; margin: 1em auto; text-align: center; font-weight: bold; border-radius: 1em;">
+                <div style="padding: 1em;">
+                    Pkl 19:00 WIB
+                </div>
+                <div style="border-bottom: 2px solid rgb(28,121,162); width: 20%; margin: auto;"></div>
+                <div style="padding: 1em;">
+                    Ps. Paulus T Supit (PK)
+                </div>
+            </div>
+        </div>
+        <div
+            id="secondary-menu"
+            style="position: fixed; top: 0; bottom: 0; right: 0; left: 0; z-index: 1; display: none;">
+            <div style="background-color: white; opacity: .9; z-index: 2; position: absolute; right: 60px; top: 60px; padding: 0 1em; max-width: 250px; width: 50%; border-radius: 1em;">
+                <button
+                    id="registration-btn"
+                    class="button button--secondary"
+                    style="display: block; margin: 1em 0; width: 100%;">Registrasi</button>
+                <button class="button button--secondary" style="display: block; margin: 1em 0; width: 100%;" disabled>Pengaturan</button>
+                <button class="button button--secondary" style="display: block; margin: 1em 0; width: 100%;" disabled>Bantuan</button>
+                <button class="button button--secondary" style="display: block; margin: 1em 0; width: 100%;" disabled>Keluar</button>
+            </div>
+            <div style="position: absolute; top: 0; bottom: 0; right: 0; left: 0; background-color: black; opacity: .5; z-index: 1;"></div>
+        </div>
+        <div class="footer" style="background-color: rgb(31,127,192); z-index: 0;">
+            <button
+                class="button button--arrow"
+                id="back-to-top-btn"
+                style="position: absolute; top: -2em; background-color: rgb(31,127,192); border-top-right-radius: 2em; border-top-left-radius: 2em; margin-left: -25px;"></button>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/schedule.js"></script>
+    </body>
+</html>

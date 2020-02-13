@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/home.css">
+        <link rel="stylesheet" type="text/css" href="css/button.css">
+        <link rel="stylesheet" type="text/css" href="css/icon.css">
+        <title>GBI REM Ciputra</title>
+    </head>
+    <body>
+        <div class="navtop" style="text-align: center;">
+            <h1 style="font-size: 1.5em;font-weight: bold;margin: 1em 0 0;text-align: center;">Account</h1>
+        </div>
+        <div class="container" style="text-align: center; padding-left: 4em; padding-right: 4em;">
+            <div style="border: 1px solid lightgray; margin-top: 3em; border-radius: 1em;">
+                <div class="special-background" style="width: 5em; height: 5em; border-radius: 5em; margin: -2.5em auto 0;"></div>
+                <p style="font-family: corbelb" id="user-name"></p>
+                <div style="font-size: .8em;">
+                    <div id="church-contact-btn" style="border: 1px solid lightgray; margin: .5em 2em; border-radius: 2em; text-align: left; padding: 0 1em;">
+                        Church Contact
+                    </div>
+                    <div id="log-out-btn" style="border: 1px solid lightgray; margin: .5em 2em; border-radius: 2em; text-align: left; padding: 0 1em;">
+                        Log Out
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top: 2em; font-size: .8em; font-weight: bold;">v2.2</p>
+        </div>
+        <div class="footer">
+            <table style="width: 100%;">
+                <tr>
+                    <td style="width: 20%;">
+                        <div id="home-btn">
+                            <div class="button--menu button--menu-home" id="menu-btn"></div>
+                            <p>Home</p>
+                        </div>
+                    </td>
+                    <td style="width: 20%;">
+                        <div id="services-btn">
+                            <div class="button--menu button--menu-services" id="menu-btn"></div>
+                            <p>Services</p>
+                        </div>
+                    </td>
+                    <td style="width: 20%;">
+                        <div id="kpa-btn">
+                            <div class="button--menu button--menu-kpa" id="menu-btn"></div>
+                            <p>KPA</p>
+                        </div>
+                        </div>
+                    </td>
+                    <td style="width: 20%;">
+                        <div id="event-btn">
+                            <div class="button--menu button--menu-event" id="menu-btn"></div>
+                            <p>Event</p>
+                        </div>
+                    </td>
+                    <td style="width: 20%;">
+                        <div id="account-btn">
+                            <div class="button--menu button--menu-account-active" id="menu-btn"></div>
+                            <p style="color: rgb(59,255,255);">Account</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery.js"></script> -->
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/account.js"></script>
+    </body>
+</html>
